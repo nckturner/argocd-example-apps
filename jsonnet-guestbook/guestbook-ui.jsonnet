@@ -46,9 +46,15 @@ local params = import 'params.libsonnet';
                      "image": params.image,
                      "name": params.name,
                      "ports": [
-                     {
-                        "containerPort": params.containerPort
-                     }
+                        {
+                           "containerPort": params.containerPort
+                        }
+                     ],
+                     "env": [
+                        {
+                           "name": "TEST",
+                           "value": "val1",
+                        }
                      ]
                   }
                ]
